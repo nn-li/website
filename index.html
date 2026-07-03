@@ -12,14 +12,15 @@
 
 <style>
   :root {
-    --paper: #f4f1ea;
-    --paper-2: #efeae0;
-    --ink: #1c1a17;
-    --ink-soft: #55504a;
-    --ink-faint: #8a847b;
-    --line: #d8d2c6;
-    --accent: #4b4a47;      /* graphite — grayscale accent */
-    --accent-deep: #2c2b28;
+    --paper: #f5f6f6;       /* cooler + brighter light gray */
+    --paper-2: #ecedee;
+    --ink: #191a1c;
+    --ink-soft: #53545a;
+    --ink-faint: #8b8c91;
+    --line: #dcdddd;
+    --accent: #494a4e;      /* graphite — cool grayscale accent */
+    --accent-deep: #2b2c2f;
+    --clay: #a5654f;        /* muted terracotta — low-saturation garnish */
     --max: 1180px;
     --ease: cubic-bezier(.19,1,.22,1);
   }
@@ -133,11 +134,11 @@
   }
   .dot {
     width: 8px; height: 8px; border-radius: 50%;
-    background: var(--ink); position: relative;
+    background: var(--clay); position: relative;
   }
   .dot::after {
     content:""; position:absolute; inset:-4px; border-radius:50%;
-    border:1px solid var(--ink-faint); animation: pulse 2.4s var(--ease) infinite;
+    border:1px solid var(--clay); animation: pulse 2.4s var(--ease) infinite;
   }
   @keyframes pulse { 0%{transform:scale(.6);opacity:1} 100%{transform:scale(1.8);opacity:0} }
 
@@ -147,7 +148,7 @@
   }
   .hero h1 em {
     font-style: italic;
-    color: var(--accent);
+    color: var(--clay);
     font-weight: 300;
   }
   .hero-lower {
@@ -191,7 +192,7 @@
     font-size: 26px; font-style: italic;
     color: var(--ink-soft);
   }
-  .marquee-track span::before { content: "✦"; color: var(--accent); margin-right: 48px; font-style: normal; font-size: 15px; vertical-align: middle; }
+  .marquee-track span::before { content: "✦"; color: var(--clay); margin-right: 48px; font-style: normal; font-size: 15px; vertical-align: middle; }
   @keyframes slide { to { transform: translateX(-50%); } }
 
   /* ---------- SECTIONS ---------- */
@@ -200,7 +201,7 @@
     display: flex; align-items: baseline; gap: 18px;
     margin-bottom: 56px;
   }
-  .sec-head .num { font-family:"Fraunces",serif; font-size: 15px; color: var(--accent); }
+  .sec-head .num { font-family:"Fraunces",serif; font-size: 15px; color: var(--clay); }
   .sec-head h2 { font-size: clamp(32px, 5vw, 58px); }
 
   /* WORK */
