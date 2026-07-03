@@ -18,8 +18,8 @@
     --ink-soft: #55504a;
     --ink-faint: #8a847b;
     --line: #d8d2c6;
-    --accent: #b5432a;      /* terracotta */
-    --accent-deep: #8f3320;
+    --accent: #4b4a47;      /* graphite — grayscale accent */
+    --accent-deep: #2c2b28;
     --max: 1180px;
     --ease: cubic-bezier(.19,1,.22,1);
   }
@@ -133,11 +133,11 @@
   }
   .dot {
     width: 8px; height: 8px; border-radius: 50%;
-    background: #3d9a52; position: relative;
+    background: var(--ink); position: relative;
   }
   .dot::after {
     content:""; position:absolute; inset:-4px; border-radius:50%;
-    border:1px solid #3d9a52; animation: pulse 2.4s var(--ease) infinite;
+    border:1px solid var(--ink-faint); animation: pulse 2.4s var(--ease) infinite;
   }
   @keyframes pulse { 0%{transform:scale(.6);opacity:1} 100%{transform:scale(1.8);opacity:0} }
 
