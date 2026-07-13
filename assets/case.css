@@ -235,6 +235,9 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 .dcard .dline.dwin .k { background: var(--accent-deep); color: #fff; }
 .dcard .dline.dlose .k { border: 1px solid var(--line); color: var(--ink-faint); }
 .dcard .dline.dlose { color: var(--ink-faint); }
+.dcard .dline.dfind .k { border: 1px solid var(--line); color: var(--ink-soft); }
+.dcard .dline.dsee .k { border: 1px solid var(--clay); color: var(--clay); }
+.dcard .dline.dland .k { background: var(--accent-deep); color: #fff; }
 .dcards.three { grid-template-columns: repeat(3, 1fr); }
 .dcard .dq { border-left: 2px solid var(--clay); padding-left: 12px; margin-top: 12px; font-size: 13px; font-style: italic; color: var(--accent); line-height: 1.6; }
 .dcard .dp { margin-top: 10px; font-size: 13px; color: var(--ink-soft); line-height: 1.65; }
