@@ -1,0 +1,15 @@
+.DS_Store
+
+# ── 原始設計大檔不上傳 GitHub ──
+# 網站只使用轉檔後的 web 版；原始檔留在本機。
+# 要更換或新增內容：把原始檔放進 assets/images/project/ 對應資料夾，請 Claude 轉檔即可。
+assets/images/project/*
+!assets/images/project/UIUX
+assets/images/project/UIUX/*
+!assets/images/project/UIUX/web
+!assets/images/project/UIUX/covers
+!assets/images/project/UIUX/chuu-redesign.jpg
+!assets/images/project/UIUX/empty-soul-map.jpg
+
+# suggest/ 整個資料夾都是內部參考資料，不上傳 GitHub
+suggest/

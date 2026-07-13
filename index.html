@@ -225,6 +225,23 @@
   .project:hover { padding-left: 24px; }
   .project:hover::before { opacity: .04; }
   .project .p-num { font-family:"Fraunces",serif; font-size: 18px; color: var(--ink-faint); }
+
+  /* image that slides in on the right of a project row on hover */
+  .p-preview {
+    position: absolute;
+    right: 108px; top: 50%;
+    width: 220px; height: 142px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -24px rgba(28,26,23,.4);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-50%) translateX(24px) scale(.94) rotate(-3deg);
+    transition: opacity .45s var(--ease), transform .55s var(--ease);
+    z-index: 5;
+  }
+  .project:hover .p-preview { opacity: 1; transform: translateY(-50%) translateX(0) scale(1) rotate(-3deg); }
   .project h3 {
     font-family: "Fraunces", serif; font-weight: 400;
     font-size: clamp(26px, 3.4vw, 40px); line-height: 1.05;
@@ -235,6 +252,10 @@
     font-size: 12.5px; color: var(--ink-soft);
     border: 1px solid var(--line); border-radius: 100px; padding: 4px 12px;
   }
+  .project .tags span.win {
+    color: var(--clay); border-color: var(--clay); font-weight: 600;
+  }
+  .project .tags span.win::before { content: "✦ "; font-size: 11px; }
   .project .p-right { text-align: right; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
   .project .year { font-family:"Fraunces",serif; font-size: 22px; }
   .project .arrow {
@@ -316,6 +337,7 @@
     .about-grid { grid-template-columns: 1fr; gap: 46px; }
     .caps-grid { grid-template-columns: 1fr; }
     .project { grid-template-columns: 36px 1fr; }
+    .p-preview { display: none; }
     .project .p-right { grid-column: 2; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; margin-top: 4px; }
   }
 </style>
@@ -376,39 +398,43 @@
         <h2 class="display">Selected&nbsp;Work</h2>
       </div>
 
-      <a class="project obs" href="#">
+      <a class="project obs" href="work/quake.html">
         <span class="p-num">01</span>
         <div>
-          <h3>Ledger — rethinking personal finance for anxious spenders</h3>
-          <div class="tags"><span>Product Design</span><span>0→1</span><span>iOS · Android</span></div>
+          <h3>震時秒判 — 地震前中後的客製化應對 App</h3>
+          <div class="tags"><span class="win">金點概念設計獎</span><span class="win">金點新秀設計獎</span><span>UI/UX</span><span>防災</span></div>
         </div>
-        <div class="p-right"><span class="year">2025</span><span class="arrow">→</span></div>
+        <img class="p-preview" src="assets/images/project/UIUX/covers/quake-cover.jpg" alt="" loading="lazy" />
+        <div class="p-right"><span class="year">2024</span><span class="arrow">→</span></div>
       </a>
 
-      <a class="project obs" href="#">
+      <a class="project obs" href="work/tra.html">
         <span class="p-num">02</span>
         <div>
-          <h3>Atlas Health — a booking flow that cut drop-off by 38%</h3>
-          <div class="tags"><span>UX Research</span><span>Service Design</span><span>Web</span></div>
+          <h3>台鐵 e訂通 — 訂票 App 介面與流程重設計</h3>
+          <div class="tags"><span>UI/UX</span><span>App Redesign</span><span>iOS</span></div>
         </div>
-        <div class="p-right"><span class="year">2024</span><span class="arrow">→</span></div>
+        <img class="p-preview" src="assets/images/project/UIUX/covers/tra-cover.jpg" alt="" loading="lazy" />
+        <div class="p-right"><span class="year">2023</span><span class="arrow">→</span></div>
       </a>
 
-      <a class="project obs" href="#">
+      <a class="project obs" href="work/soulmap.html">
         <span class="p-num">03</span>
         <div>
-          <h3>Northwind Design System — one language across 40 teams</h3>
-          <div class="tags"><span>Design Systems</span><span>Tokens</span><span>Docs</span></div>
+          <h3>Soul Map — 冥想與自我覺察 App</h3>
+          <div class="tags"><span>UI/UX</span><span>App</span><span>Wellness</span></div>
         </div>
-        <div class="p-right"><span class="year">2024</span><span class="arrow">→</span></div>
+        <img class="p-preview" src="assets/images/project/UIUX/covers/soulmap-cover.jpg" alt="" loading="lazy" />
+        <div class="p-right"><span class="year">2023</span><span class="arrow">→</span></div>
       </a>
 
-      <a class="project obs" href="#">
+      <a class="project obs" href="work/chuu.html">
         <span class="p-num">04</span>
         <div>
-          <h3>Foglight — an AI writing tool people actually trust</h3>
-          <div class="tags"><span>AI UX</span><span>Prototyping</span><span>Desktop</span></div>
+          <h3>chuu Redesign — 女裝電商網站重設計</h3>
+          <div class="tags"><span>UI/UX</span><span>Web</span><span>E-commerce</span></div>
         </div>
+        <img class="p-preview" src="assets/images/project/UIUX/covers/chuu-cover.jpg" alt="" loading="lazy" />
         <div class="p-right"><span class="year">2023</span><span class="arrow">→</span></div>
       </a>
     </div>
@@ -477,6 +503,7 @@
       <h2 class="display obs">Say hello.</h2>
       <div class="obs"><a class="mail" href="mailto:hello@ninali.design">hello@ninali.design</a></div>
       <div class="socials obs">
+        <a href="assets/files/nina-cv.pdf" download>Résumé ↓</a>
         <a href="#">LinkedIn ↗</a>
         <a href="#">Dribbble ↗</a>
         <a href="#">Read.cv ↗</a>

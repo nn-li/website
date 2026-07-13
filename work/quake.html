@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>震時秒判 — 地震應對 App · Case Study</title>
+<meta name="description" content="震時秒判 — 涵蓋地震前、中、後的應對 App。UI/UX 概念設計，含使用者研究、痛點分析與完整介面設計。金點概念設計獎、金點新秀設計獎。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/case.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Portfolio</a>
+    <a class="back" href="../index.html#work">← All work</a>
+  </div>
+</div>
+
+<main>
+  <!-- 滿版 hero -->
+  <div class="cx-herobanner">
+    <img src="../assets/images/project/UIUX/web/quake/cover.jpg?v=2" alt="震時秒判 主視覺" />
+  </div>
+
+  <!-- 標題 -->
+  <div class="cx-title">
+    <span class="eyebrow">UI/UX · 地震應對 App · 2024</span>
+    <h1 class="display">震時秒判</h1>
+    <p class="lead">涵蓋地震前、中、後的應對 App，依照你的位置與情境，告訴你當下該怎麼做。</p>
+    <div class="awards">
+      <img class="award-img" src="../assets/images/awards/golden-pin-concept-2025.png" alt="金點概念設計獎 2025 標章 Golden Pin Concept Design Award" />
+      <span class="award">金點概念設計獎 <span class="en">Golden Pin Concept Design Award</span></span>
+      <span class="award">金點新秀設計獎 <span class="en">Young Pin Design Award</span></span>
+    </div>
+  </div>
+
+  <!-- meta -->
+  <dl class="cx-metarow">
+    <div><dt>專案時程</dt><dd>2024</dd></div>
+    <div><dt>主要負責項目</dt><dd>UX 研究、UI 設計、Prototype、聲音設計、介紹影片製作</dd></div>
+    <div><dt>使用工具</dt><dd>Figma</dd></div>
+    <div><dt>類型</dt><dd>概念設計 · 防災</dd></div>
+  </dl>
+
+  <!-- 左導覽 + 敘事 -->
+  <div class="cx">
+    <aside class="cx-nav">
+      <ul>
+        <li><a href="#s1" class="active">背景與目標</a></li>
+        <li><a href="#s2">挑戰與洞察</a></li>
+        <li><a href="#s3">設計決策</a></li>
+        <li><a href="#s4">介面設計</a></li>
+      </ul>
+    </aside>
+
+    <div class="cx-main">
+
+      <!-- 01 背景與目標 -->
+      <section class="cx-sec" id="s1" data-sec>
+        <span class="secnum">01</span>
+        <h2 class="lbl">背景與目標</h2>
+        <p class="intro">台灣每年有超過 3 萬次地震，現行警報卻只提供數值，沒有回答「現在該怎麼做」。這個專案要解決的不是資訊不足，而是<b>資訊無法轉成行動</b>：搖晃當下「該不該跑」的判斷問題。</p>
+        <div class="sub">
+          <h3>搖晃當下，人們其實在猶豫</h3>
+          <p>「搖晃有多嚴重、我該跑嗎？這棟樓會不會倒？衝出去反而更危險？」多數人在這三個疑問中選擇打卡、觀望，錯過了逃生時機。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/bg-problem.jpg" alt="地震當下使用者的三個疑問與觀望行為" loading="lazy" /><div class="cap">地震當下的三個疑問 → 觀望 → 錯失逃生時機（右：921 大地震資料圖）</div></div>
+        </div>
+        <div class="sub">
+          <h3>使用者研究分析</h3>
+          <p>從量化問卷（年齡涵蓋 10–65 歲）和質化訪談確認這不是少數人的困境：</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/research-overview.jpg" alt="使用者研究方法：量化問卷 × 質化訪談" loading="lazy" /></div>
+          <div class="fig" style="margin-top:14px">
+            <div class="metrics four">
+              <div class="metric"><div class="big">90%</div><div class="lbl">地震時無法快速判斷該逃生或原地避難</div></div>
+              <div class="metric"><div class="big">85%</div><div class="lbl">擔心家人安全，缺乏即時回報方式</div></div>
+              <div class="metric"><div class="big">72%</div><div class="lbl">防災知識停留在宣導，難以轉化為行動</div></div>
+              <div class="metric"><div class="big">70%</div><div class="lbl">缺乏定期檢查防災裝備與災後修復的機制</div></div>
+            </div>
+          </div>
+          <p>這些痛點依災害的時間先後，落在震前、震時、震後三段。因此本專案<b>把警報從「制式警報通知」變成「行動指引」</b>：在地震前、中、後各階段，依使用者的位置與情境，給出當下即時該做的行動。</p>
+        </div>
+      </section>
+
+      <!-- 02 挑戰與洞察 -->
+      <section class="cx-sec" id="s2" data-sec>
+        <span class="secnum">02</span>
+        <h2 class="lbl">挑戰與洞察</h2>
+        <p class="intro">整個專案最關鍵的轉折，是一個<b>被訪談推翻的假設</b>：我原本以為地震 App 的重點在「災難當下」。</p>
+        <div class="phases">
+          <div class="ph"><span class="pht">4 個月</span><span class="phw">研究 → 設計 → 兩輪測試</span></div>
+          <div class="ph"><span class="pht">量化問卷</span><span class="phw">年齡涵蓋 10–65 歲，掌握整體輪廓</span></div>
+          <div class="ph"><span class="pht">質化訪談 5 位</span><span class="phw">深度分析聚焦 3 位，以最大差異取樣</span></div>
+        </div>
+
+        <div class="sub">
+          <h3>用災害發生的不同地區／情境來選擇受訪者</h3>
+          <p>影響災難需求的關鍵是兩件事：面對什麼災害、災害來臨時能不能移動。因此我以<b>「災害類型 × 移動策略」</b>挑選差異最大的三位受訪者深入分析，另外兩位用於檢驗發現是否成立。<b>取樣目標為差異覆蓋，而非樣本規模。</b></p>
+          <div class="smap">
+            <div class="sgroup main">
+              <div class="glabel">深度分析 · 3 位<span>以「災害類型 × 移動策略」取最大差異</span></div>
+              <div class="srow"><b>Gill</b><span class="st">都會地震</span><span class="st">帶幼移動</span><span class="sd">孕婦，避難時須同時兼顧幼兒</span></div>
+              <div class="srow"><b>Nora</b><span class="st">山區土石流</span><span class="st">就地避難</span><span class="sd">聯外道路與訊號都可能中斷</span></div>
+              <div class="srow"><b>Carter</b><span class="st">都會地震</span><span class="st">主動疏散</span><span class="st hot">唯一親歷者</span><span class="sd">親歷花蓮大地震，並協助他人疏散</span></div>
+            </div>
+            <div class="sgroup check">
+              <div class="glabel">延伸驗證 · 2 位<span>檢驗三人的發現是否成立</span></div>
+              <div class="srow"><b>Henry</b><span class="sd">研究生</span></div>
+              <div class="srow"><b>Arnold</b><span class="sd">裝修師傅</span></div>
+            </div>
+          </div>
+          <p>當受訪者的說法彼此衝突時，以 Carter 的資料為準：他是五人中唯一真正經歷過大地震的人，<b>實際行為的證據比想像中的回答更可信</b>。</p>
+        </div>
+        <div class="sub">
+          <h3>五位受訪者的共同痛點</h3>
+          <p>孕婦、山區學生、健身教練、研究生、裝修師傅，五個人的背景沒有交集，卻在八件事上講出同樣的痛點。</p>
+          <div class="consensus">
+            <div class="citem"><span>1. 不知道避難所的位置</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>2. 災後最優先的需求是物資</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>3. 需要離線模式</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>4. 警報階段全數失效</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>5. 圖示優先於文字</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>6. 介面必須極簡</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>7. 不信任斷網後的 App，皆自備替代方案</span><span class="cs">5 / 5</span></div>
+            <div class="citem"><span>8. 未安裝任何災防 App</span><span class="cs">5 / 5</span></div>
+            <div class="citem weak"><span>系統失效時，回到人際與社區網絡</span><span class="cs">3 / 5</span></div>
+            <div class="citem weak"><span>災後補助流程不透明</span><span class="cs">3 / 5</span></div>
+          </div>
+          <p>這八項共識構成產品的必要功能。以下三張 persona 呈現的則是設計需要取捨的部分</p>
+          <div class="pcards">
+            <div class="pcard">
+              <img class="face" src="../assets/images/project/UIUX/web/quake/face-gill.jpg" alt="Gill" loading="lazy" />
+              <div class="body">
+                <div class="nm">Gill</div>
+                <div class="tag">孕婦 · 都會地震</div>
+                <div class="pq">「不能全力奔跑。」</div>
+                <div class="move">移動策略：<b>帶幼移動</b></div>
+                <div class="plabel">核心痛點</div>
+                <ul class="pains">
+                  <li>自身行動受限，孩子又難以受控，能分給螢幕的注意力趨近於零</li>
+                  <li>擔心孕婦物資，以及避難路徑是否平穩</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pcard">
+              <img class="face" src="../assets/images/project/UIUX/web/quake/face-nora.jpg" alt="Nora" loading="lazy" />
+              <div class="body">
+                <div class="nm">Nora</div>
+                <div class="tag">山區學生 · 土石流風險</div>
+                <div class="pq">「到了才發現進不去。」</div>
+                <div class="move">移動策略：<b>就地避難</b></div>
+                <div class="plabel">核心痛點</div>
+                <ul class="pains">
+                  <li>山區訊號原本就不穩定，斷網後 App 無法提供協助</li>
+                  <li>聯外道路常僅有一條，封路即無法離開；避難所數量少，選錯就沒有第二次機會</li>
+                </ul>
+              </div>
+            </div>
+            <div class="pcard">
+              <img class="face" src="../assets/images/project/UIUX/web/quake/face-carter.jpg" alt="Carter" loading="lazy" />
+              <div class="body">
+                <div class="nm">Carter</div>
+                <div class="tag">健身教練 · 親歷花蓮大地震</div>
+                <div class="pq">「有危機的當下，我不會直覺地使用手機。」</div>
+                <div class="move">移動策略：<b>主動疏散、協助他人</b></div>
+                <div class="plabel">核心痛點</div>
+                <ul class="pains">
+                  <li>危機當下不會查看手機</li>
+                  <li>最擔心天花板掉落物，這是只有親歷者才會給出的答案</li>
+                </ul>
+                <span class="badge">唯一親歷者</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>三個人在同一個環節失效，原因卻完全不同</h3>
+          <p>三人的旅程低谷都落在「收到警報的那一刻」：</p>
+          <ul class="facts">
+            <li><b>Gill</b>：被過量資訊癱瘓</li>
+            <li><b>Nora</b>：讀不懂純文字的警報類型</li>
+            <li><b>Carter</b>：根本不會拿出手機</li>
+          </ul>
+          <p>一個設計無法同時解決三種失效，推導出後續的分層警報架構，先讓人聽見⭢ 再讓人認出 ⭢ 最後只給一個指引。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/journey-integrated.jpg" alt="三人旅程整合：同一個環節失效，三種機制" loading="lazy" /></div>
+        </div>
+
+        <div class="sub">
+          <h3>延伸驗證：兩位新受訪者，改寫了我的三個結論</h3>
+          <p>深入分析三位受訪者後，我加訪了 Henry（研究生）與 Arnold（裝修師傅）做交叉驗證。核心發現從三人一致變成五人一致<b>，但更重要的是，他們各自暴露了我原本沒看見的盲點。</b>。</p>
+          <div class="dcards three">
+            <div class="dcard">
+              <span class="dnum">Henry · 研究生</span>
+              <h4>收到警報也沒用，他從來沒練習過</h4>
+              <p class="dq">「警報之後該採取什麼行動，沒有明確的規範，也沒有事前教育。」</p>
+              <p class="dp">不是看不到、讀不懂，也不是不看手機，而是沒有被教過。這呼應 Carter 的「平時不常打開防災 App，使用上就會很不熟悉」：<b>災中的失敗，根源在災前的空白</b>。</p>
+            </div>
+            <div class="dcard">
+              <span class="dnum">Henry · 研究生</span>
+              <h4>斷網時，大家靠的是鄰居，不是 App</h4>
+              <p class="dq">「由當地的里民代表系統性統計居民狀態與失蹤與否，供外地親友查詢。」</p>
+              <p class="dp">其他人回答的是功能（打電話、對講機、簡訊），他回答的是制度。加上 Gill 的「鄰居救濟」與 Carter 的記者同學 LINE 群，<b>五人中有三人在系統失效時回到人際網絡</b>，而現有災防 App 完全沒有承接這條路徑。</p>
+            </div>
+            <div class="dcard">
+              <span class="dnum">Arnold · 裝修師傅</span>
+              <h4>推翻我的結論：焦慮來自不確定性</h4>
+              <p class="dq">「如果恢復時間無法確定，災戶會很擔心。」</p>
+              <p class="dp">停水何時恢復？避難所何時再開放？我原本判斷「心理支持不需要做」，他的回答修正了這個結論：真正該做的是「恢復時間預估」，<b>用確定性化解焦慮，而不是用安慰</b>。</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sub">
+          <h3>被推翻的假設：災難當下，沒人會打開 App</h3>
+          <div class="versus">
+            <div class="vopt lose">
+              <span class="vtag">我以為</span>
+              <div class="vt">災難當下最重要</div>
+              <p>把資源投入震時的警報與指引</p>
+            </div>
+            <div class="vs">vs</div>
+            <div class="vopt win">
+              <span class="vtag">研究發現</span>
+              <div class="vt">重心在災前與災後</div>
+              <p>產品仍涵蓋前中後，五人都未安裝災防 App，而唯一的親歷者說，危機當下他不會拿出手機</p>
+            </div>
+          </div>
+          <p style="margin-top:16px">災前需要防災包到期提醒與避難演練；災後需要物資站位置與補助申請資訊，而<b>目前沒有任何災防 App 覆蓋災後這一段，這是最明顯的產品空白</b>。因此我把災中壓縮到接近消失，把資源投入災前的準備訓練與災後的行政協助。</p>
+          <div class="pull"><p>「有危機的當下，我不會直覺地使用手機。」（Carter，五人中唯一真正經歷過大地震的受訪者）</p></div>
+        </div>
+
+        <div class="sub">
+          <h3>洞察收斂：一個失效，五種機制</h3>
+          <table class="mtable">
+            <thead>
+              <tr><th>誰</th><th>失效方式</th><th>對應的設計</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Gill</td><td>資訊過多，決策癱瘓</td><td>減量 → 只給一個指令</td></tr>
+              <tr><td>Nora</td><td>全是文字，讀不懂</td><td>圖示辨識</td></tr>
+              <tr><td>Carter</td><td>根本不看手機</td><td>聲音穿透</td></tr>
+              <tr><td>Henry</td><td>不知道該做什麼，沒有事前教育</td><td>災前演練，介面解決不了</td></tr>
+              <tr><td>Arnold</td><td>「事情發生太突然」，沒有反應時間</td><td>災前預先決策</td></tr>
+            </tbody>
+          </table>
+          <p>前三種可以疊成逐層穿透的警報架構：<b>先聽見（Carter）→ 再認出（Nora）→ 才行動（Gill）</b>。但後兩種無法靠介面解決：Henry 與 Arnold 的失效發生在災難之前，源於沒有被教過、也沒有練習過。這把產品重心進一步推向「災前」，也解釋了為什麼災中被壓縮到接近消失。</p>
+        </div>
+
+      </section>
+
+      <!-- 03 設計決策 -->
+      <section class="cx-sec" id="s3" data-sec>
+        <span class="secnum">03</span>
+        <h2 class="lbl">設計決策</h2>
+        <p class="intro">重心確定放在災前與災後之後，災難當下的設計只剩一個核心取捨：</p>
+        <div class="versus">
+          <div class="vopt lose">
+            <span class="vtag">放棄</span>
+            <div class="vt">資訊完整</div>
+            <p>完整提供建築類型、震度數值與災情細節</p>
+          </div>
+          <div class="vs">vs</div>
+          <div class="vopt win">
+            <span class="vtag">我的選擇</span>
+            <div class="vt">秒讀秒懂</div>
+            <p>警報頁只保留一個判斷：先跑還是先躲</p>
+          </div>
+        </div>
+        <p class="intro" style="margin-top:16px">高壓情境下每多一個字都是負擔。細節退到次層而非刪除：放棄資訊完整，換來一眼可讀。</p>
+        <div class="sub">
+          <h3>三階段：涵蓋前中後，災中刻意極簡</h3>
+          <div class="phases">
+            <div class="ph hot"><span class="pht">震前</span><span class="phw">重點投入 · 準備與訓練</span></div>
+            <div class="ph mute"><span class="pht">震時</span><span class="phw">刻意極簡：叫醒 → 認出 → 一個指令</span></div>
+            <div class="ph hot"><span class="pht">震後</span><span class="phw">重點投入 · 物資與行政</span></div>
+          </div>
+          <p style="margin-top:14px">產品架構沿災害時間軸展開，但三段刻意不平均用力：五位受訪者沒有一位會在災難當下打開 App，因此資源集中在災前與災後。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/system-overview.jpg" alt="功能系統概述：震前準備 / 震時應變 / 震後復原" loading="lazy" /></div>
+        </div>
+        <div class="sub">
+          <h3>四個決策，四個取捨</h3>
+          <div class="dcards">
+            <div class="dcard">
+              <span class="dnum">決策 01</span>
+              <h4>離線是預設，不是備案</h4>
+              <span class="dsrc">依據 · 5/5 共識＋山區受訪者的日常：她不是在假設斷網，是在描述訊號不穩的每一天</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>路線離線可看、多條備援路線、集合點事前設定</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>「斷網才切換」的 fallback 架構</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dnum">決策 02</span>
+              <h4>圖示優先於文字</h4>
+              <span class="dsrc">依據 · 5/5 共識：五位受訪者各自獨立提出，是設計原則、不是個人偏好</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>警報類型用圖示辨識，一眼認出是哪種災害</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>文字描述的完整細節</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dnum">決策 03</span>
+              <h4>心理支持：先刪除，再修正</h4>
+              <span class="dsrc">依據 · 主力三人在「物資 vs 心理支援」中全數選擇物資；延伸驗證的 Arnold 修正了結論：焦慮來自不確定性</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>改做「恢復時間預估」，用確定性化解焦慮，而不是用安慰</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>心理諮商功能（不是 P0，但不是零需求）</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dnum">決策 04</span>
+              <h4>一鍵填空式通報</h4>
+              <span class="dsrc">依據 · 受訪者的原話：「我在 ＿＿，發生 ＿＿，平安，在 ＿＿ 集合」。他要的不是聊天，而是句型</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>填空式一鍵通報，把認知負荷納入設計</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>即時聊天：災難當下沒有餘裕打字</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Functional Map（暫時隱藏）
+        <div class="sub">
+          <h3>Functional Map</h3>
+          <p>從三階段展開的完整功能地圖，作為介面設計的藍圖。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/functional-map.jpg" alt="Functional Map 完整功能地圖" loading="lazy" /></div>
+        </div>
+        -->
+        <div class="sub">
+          <h3>使用者流程</h3>
+          <p>三條流程對應震前、震時、震後，標出每個畫面之間的觸發條件與系統判斷邏輯：什麼時候由系統自動接手、什麼時候需要使用者做選擇。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/userflow-1.png?v=2" alt="使用者流程一 · 即時應變與避難指引" loading="lazy" /><div class="cap">流程一 · 即時應變與避難指引（震時）</div></div>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/userflow-2.png?v=2" alt="使用者流程二 · 日常防震準備" loading="lazy" /><div class="cap">流程二 · 日常防震準備（震前）</div></div>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/quake/userflow-3.png?v=2" alt="使用者流程三 · 災後支援整合" loading="lazy" /><div class="cap">流程三 · 災後支援整合（震後）</div></div>
+        </div>
+        <div class="sub">
+          <h3>成效與驗證</h3>
+          <p>這套「災前災後為主、災中極簡」的架構，經兩輪易用性測試驗證與修正（詳見 04 介面設計），最終獲得<b>金點概念設計獎</b>與<b>金點新秀設計獎</b>的肯定。</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- 04 介面設計（深色霓虹展示區） -->
+  <section class="uidark" id="s4" data-sec>
+    <div class="uidark-inner">
+      <span class="k">04</span>
+      <h2>介面設計</h2>
+      <p class="lede">警報介面用螢光綠搭配深色底，在慌亂中也能一眼看清；警報內容會依震度和所在情境調整。</p>
+
+      <div class="uvideo">
+        <div class="embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/LMlbZSbseyU?si=RHSqRPJ5Ap5lBpuz" title="震時秒判 產品介紹影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="cap">產品介紹影片</div>
+      </div>
+
+      <!-- Style Guide -->
+      <div class="uphase">
+        <span class="pk">Design System</span>
+        <h3>Style Guide</h3>
+        <p>統一色彩、字級與元件狀態，讓資訊密度高的畫面也能保持一致。</p>
+        <div class="styleguide"><img src="../assets/images/project/UIUX/web/quake/styleguide.jpg?v=2" alt="Style Guide 設計系統" loading="lazy" /></div>
+        <div class="sg-hint">↕ 框內可捲動查看完整設計系統</div>
+      </div>
+
+      <!-- 震時 -->
+      <div class="uphase">
+        <span class="pk">情境一 · 震時</span>
+        <h3>震時應變</h3>
+        <p>地震當下，依照所在位置與情境發出警報，指引避難路線，並確認家人是否平安。</p>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-response-1.jpg" alt="震時應變 · 客製化警報與震度分級判斷" loading="lazy" /></div>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-response-2.jpg" alt="震時應變 · 避難導引與親友安全確認" loading="lazy" /></div>
+
+        <!-- 警報聲設計 -->
+        <div class="uphase" style="margin-top:44px">
+          <span class="pk">Sound Design</span>
+          <h3>警報聲</h3>
+          <p>警報聲也是自己設計的，分成低、中、高三個震度級別。急促程度不同，不用看螢幕，用聽的就能判斷嚴重性。</p>
+          <div class="usounds">
+            <div class="usound">
+              <span class="lv">震度低</span>
+              <h4>輕微提示</h4>
+              <p>和緩的提示音，提醒留意就好。</p>
+              <audio controls preload="none" src="../assets/images/project/UIUX/web/quake/alarm-low.m4a"></audio>
+            </div>
+            <div class="usound mid">
+              <span class="lv">震度中</span>
+              <h4>中等警示</h4>
+              <p>節奏加快，提醒做好應變準備。</p>
+              <audio controls preload="none" src="../assets/images/project/UIUX/web/quake/alarm-medium.m4a"></audio>
+            </div>
+            <div class="usound high">
+              <span class="lv">震度高</span>
+              <h4>緊急警報</h4>
+              <p>急促連續的警示，必須立即行動。</p>
+              <audio controls preload="none" src="../assets/images/project/UIUX/web/quake/alarm-high.m4a"></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 震前 -->
+      <div class="uphase">
+        <span class="pk">情境二 · 震前</span>
+        <h3>震前準備</h3>
+        <p>防災包、家具固定、避難演練，平常就能一項一項準備好。</p>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-prepare-1.jpg" alt="震前準備 · 防災包準備與家具固定自檢" loading="lazy" /></div>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-prepare-2.jpg" alt="震前準備 · 互動式模擬演練" loading="lazy" /></div>
+      </div>
+
+      <!-- 震後 -->
+      <div class="uphase">
+        <span class="pk">情境三 · 震後</span>
+        <h3>震後修復</h3>
+        <p>AI 建築檢測、補助申請、社群互助，把災後需要的資訊集中在同一個地方。</p>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-recover-1.jpg" alt="震後修復 · AI 建築物檢測與政府資源整合" loading="lazy" /></div>
+        <div class="uwide"><img src="../assets/images/project/UIUX/web/quake/ui-recover-2.jpg" alt="震後修復 · 社群互助打卡" loading="lazy" /></div>
+      </div>
+
+      <!-- Prototype 互動展示 -->
+      <div class="uphase">
+        <span class="pk">Prototype</span>
+        <h3>互動原型</h3>
+        <p>主要功能實際操作起來的樣子。</p>
+        <div class="uclips">
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-0-custom.mp4" type="video/mp4" /></video><div class="cap">客製化設定</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-1-alert.mp4" type="video/mp4" /></video><div class="cap">警示通知</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-2-nav.mp4" type="video/mp4" /></video><div class="cap">避難路線導航</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-3-furniture.mp4" type="video/mp4" /></video><div class="cap">家具固定教學</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-4-drill-select.mp4" type="video/mp4" /></video><div class="cap">避難演練・模式選擇</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-5-drill-building.mp4" type="video/mp4" /></video><div class="cap">避難演練・隨機情境</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-6-marquee.mp4" type="video/mp4" /></video><div class="cap">模擬地震跑馬燈</div></div>
+          <div class="uclip"><video class="uclipv" muted loop playsinline preload="metadata"><source src="../assets/images/project/UIUX/web/quake/proto-7-aiscan.mp4" type="video/mp4" /></video><div class="cap">AI 建築掃描</div></div>
+        </div>
+      </div>
+
+      <!-- 易用性測試 -->
+      <div class="uphase">
+        <span class="pk">驗證</span>
+        <h3>易用性測試</h3>
+        <p>找了 5 位使用者，分別在<b style="color:#e9ecdb">日間與晚間</b>測試核心流程。地震發生的時間會影響能見度和操作方式，所以分開驗證。</p>
+
+        <div class="ufindings">
+          <p class="fnote">測試中使用者的猶豫，仍集中在那三個問題：<b>搖晃有多嚴重、這棟樓會不會倒、衝出去反而更危險</b>。根據測試結果，我做了以下調整：</p>
+          <div class="ffind">
+            <h4>避難流程補完整</h4>
+            <p>原本的流程斷在「決定要跑之後」，選了避難所卻沒有接續。我把它補成一條完整路徑：判斷是否避難 → 選定避難所自動更新路線 → 選交通方式 → 導航 → 到達通知 → 通知家人集合。交通方式也做了取捨：步行優先；開車則提示開警示燈、緩慢靠右停車熄火、再就近避難，因為災時開車本身就是風險。</p>
+          </div>
+          <div class="ffind">
+            <h4>警報分級 ＋ 語音播報</h4>
+            <p>測試也印證了同一件事：逃難時沒有人會一直盯著手機。核心指令改用語音播報，警報聲分低、中、高三級，用聽的就能判斷嚴重度（對應分層警報的第一層：聲音穿透）。</p>
+          </div>
+          <div class="ffind">
+            <h4>高壓下的易讀與易點</h4>
+            <p>這就是「資訊完整 vs 秒讀秒懂」的落地：放大觸控範圍，重排地震知識的資訊層級，建築類型縮小、「立即避難」放到最醒目的位置。</p>
+          </div>
+          <div class="ffind">
+            <h4>家人安全即時同步</h4>
+            <p>沿用受測者提出的填空句型，回報是否安全、所在位置、是否集合，減少震後彼此找不到的焦慮。</p>
+          </div>
+          <div class="ffind">
+            <h4>風險評估與專業協助</h4>
+            <p>加入風險評估通知、建築檢測專業人員協助與救助人員資訊，以及防止家具翻倒的提醒。</p>
+          </div>
+        </div>
+
+        <div class="uvideo">
+          <video controls playsinline preload="none">
+            <source src="../assets/images/project/UIUX/web/quake/usability.mp4" type="video/mp4" />
+          </video>
+          <div class="cap">易用性測試操作實錄</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="wrap">
+      <span class="eyebrow">Next project</span>
+      <a href="tra.html">台鐵 e訂通 →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Portfolio</span>
+    <span>UI/UX Case Study</span>
+  </div>
+</footer>
+
+<script>
+  // 左側章節錨點：捲動高亮
+  const links = [...document.querySelectorAll('.cx-nav a')];
+  const map = {}; links.forEach(a => map[a.getAttribute('href')] = a);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map['#' + e.target.id];
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  document.querySelectorAll('[data-sec]').forEach(s => io.observe(s));
+
+  // 互動 clip：滑到才播、離開就停（省效能）
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) { v.play().catch(() => {}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.35 });
+  document.querySelectorAll('.uclipv').forEach(v => cio.observe(v));
+</script>
+
+</body>
+</html>
