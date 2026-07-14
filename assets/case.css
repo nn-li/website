@@ -368,3 +368,30 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
   .screens { column-count: 2; padding: 0 16px; }
   .ui-sub, .wide, .videobox { padding: 0 16px; }
 }
+
+/* ---- tap-to-zoom overlay ---- */
+img.zoomable { cursor: zoom-in; }
+img.zoomable:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+.zoomov {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(20,19,17,.92);
+  display: none;
+}
+.zoomov.on { display: block; }
+.zoomscroll { position: absolute; inset: 0; overflow: auto; -webkit-overflow-scrolling: touch; padding: 48px 0; }
+.zoomscroll img {
+  display: block; margin: 0 auto;
+  width: auto; max-width: none;
+  cursor: zoom-out;
+}
+.zoomclose {
+  position: fixed; top: 14px; right: 14px; z-index: 101;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.4); background: rgba(0,0,0,.4);
+  color: #fff; font-size: 24px; line-height: 1; cursor: pointer;
+}
+.zoomclose:hover, .zoomclose:focus-visible { background: rgba(0,0,0,.7); outline: none; border-color: #fff; }
+@media (max-width: 720px) {
+  /* 手機上板圖太小，提示可放大 */
+  .fig .cap::after, .boxhint::after { content: "（點圖可放大）"; color: var(--ink-faint); }
+}
