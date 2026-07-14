@@ -17,3 +17,11 @@ suggest/
 # 個人照片原始檔不上傳（網站只用轉檔後的 portrait.jpg）
 assets/images/photo/*
 !assets/images/photo/portrait.jpg
+
+# 內部工作文件不上傳
+HANDOFF.md
+README.md
+uiux-career-coach-prompt.md
+assets/files/README.txt
+work/_template.html
+作品集參考/
