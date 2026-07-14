@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Soul Map — 心靈冥想 App · Case Study</title>
-<meta name="description" content="Soul Map — 心靈冥想 / 自我覺察 App 的 UI/UX 完整案例。" />
+<title>Soul Map — 冥想 App 概念設計 · Case Study</title>
+<meta name="description" content="Soul Map — 從 0 到 1 的冥想 App 概念設計。以循序解鎖的主題結構回應「不知如何開始」與「無法持續」兩大門檻，並以角色與色彩建立情緒語言。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -20,68 +20,243 @@
 </div>
 
 <main>
-  <section class="case-hero">
-    <div class="wrap">
-      <span class="eyebrow">UI/UX · Wellness App · 2023</span>
-      <h1 class="display">Soul Map</h1>
-      <p class="lead">以「冥想與自我覺察」為主題的 App 概念 —— 從 UX 研究、人物誌、資訊架構到 UI 視覺的完整案例，用柔和的漸層與 3D 角色建立平靜、被陪伴的使用感受。</p>
+  <!-- 滿版 hero -->
+  <div class="cx-herobanner">
+    <img src="../assets/images/project/UIUX/web/soulmap/cover.jpg" alt="Soul Map 主視覺" />
+  </div>
+
+  <!-- 標題 -->
+  <div class="cx-title">
+    <span class="eyebrow">UI/UX · Meditation App Concept · 2022</span>
+    <h1 class="display">Soul Map</h1>
+    <p class="lead">從 0 到 1 的冥想 App 概念設計：把「持續下去的動力」做成產品機制與視覺語言。</p>
+  </div>
+
+  <!-- meta -->
+  <dl class="cx-metarow">
+    <div><dt>專案時程</dt><dd>2022</dd></div>
+    <div><dt>主要負責項目</dt><dd>UX 研究、UI 設計、角色與視覺設計</dd></div>
+    <div><dt>使用工具</dt><dd>Figma</dd></div>
+    <div><dt>類型</dt><dd>概念設計 · 心理健康</dd></div>
+  </dl>
+
+  <!-- 左導覽 + 敘事 -->
+  <div class="cx">
+    <aside class="cx-nav">
+      <ul>
+        <li><a href="#s1" class="active">背景與目標</a></li>
+        <li><a href="#s2">挑戰與洞察</a></li>
+        <li><a href="#s3">設計決策</a></li>
+        <li><a href="#s4">介面設計</a></li>
+      </ul>
+    </aside>
+
+    <div class="cx-main">
+
+      <!-- 01 背景與目標 -->
+      <section class="cx-sec" id="s1" data-sec>
+        <span class="secnum">01</span>
+        <h2 class="lbl">背景與目標</h2>
+        <p class="intro">冥想有助於緩解焦慮與壓力，但多數人在學習過程中會遇到兩個障礙，<b>不知道如何開始，以及難以長期持續</b>。Soul Map 是一項從 0 到 1 的概念設計，目標是透過產品機制降低入門門檻、建立持續練習的動力。</p>
+        <div class="sub">
+          <h3>專案目標</h3>
+          <ul class="facts">
+            <li>引導式冥想，幫助使用者輕鬆進入、提高專注與放鬆</li>
+            <li>主題依難度與目標分類，循序漸進解鎖，降低入門門檻</li>
+            <li>日記與進度追蹤，把進步變得看得見，支撐習慣養成</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 02 挑戰與洞察 -->
+      <section class="cx-sec" id="s2" data-sec>
+        <span class="secnum">02</span>
+        <h2 class="lbl">挑戰與洞察</h2>
+        <p class="intro">這個專案的研究做三件事：看競品缺什麼、找出三種典型使用者、把他們的旅程攤開找斷點。</p>
+        <div class="phases">
+          <div class="ph"><span class="pht">競品分析</span><span class="phw">Headspace、Calm、10% happier</span></div>
+          <div class="ph"><span class="pht">Persona · 3 位</span><span class="phw">對應冥想旅程的三個階段</span></div>
+          <div class="ph"><span class="pht">Journey Map</span><span class="phw">斷點歸納成三個設計方向</span></div>
+        </div>
+
+        <div class="sub">
+          <h3>競品分析：共同的缺口</h3>
+          <p>三款主流冥想 App 都有探索、主題自選與紀錄追蹤；差異在 Headspace 的社交互動、Calm 的沉浸介面、10% happier 的個人化引導。共同的缺口是：<b>沒有一款把「循序漸進」做成結構</b>，初學者一進來就面對整片主題海。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/research.jpg" alt="競品分析：三款冥想 App 的定位與異同" loading="lazy" /><div class="cap">競品定位 · 資訊架構複雜度 × 介面簡易度，與三款產品的類同點、類異點</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>三位使用者：開始、持續、分享</h3>
+          <p>三位訪談對象剛好落在冥想旅程的三個階段：想開始的 CAMILA（不知道冥想該如何開始）、想持續的 KEVIN（容易分心、很難自律養成習慣）、想分享的 GEOFF（和身邊的人一起冥想更有樂趣）。<b>三個階段，三種需要被設計的動力。</b></p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/persona.jpg" alt="三位 Persona：CAMILA、KEVIN、GEOFF" loading="lazy" /><div class="cap">Persona · 想開始（CAMILA）、想持續（KEVIN）、想分享（GEOFF）</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>旅程斷點：三個設計方向</h3>
+          <p>把使用歷程從探索、註冊、開始冥想到長期使用攤開後，低谷收斂成三件事：<b>主題太多不知道選哪個、無法專注與維持動力、無法與朋友分享</b>。這三個方向就是後續設計的骨架。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/journey.jpg" alt="Journey Map：使用歷程與痛點" loading="lazy" /><div class="cap">Journey Map · 低谷集中在「不知道選哪個主題」「付費牆」「沒有動力持續」</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>設計觀點：五個功能支柱</h3>
+          <p>三個方向展開成五個功能支柱：進度追蹤、解鎖資源、主題分類、好友分享、日記。以解鎖的方式循序漸進獲得新課程，用心情日記回顧成長，讓動力來自產品機制本身。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/pov.jpg" alt="Point of View 與五大功能支柱" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <!-- 03 設計決策 -->
+      <section class="cx-sec" id="s3" data-sec>
+        <span class="secnum">03</span>
+        <h2 class="lbl">設計決策</h2>
+        <p class="intro">五個支柱裡，真正的核心判斷只有一個：<b>主題要不要全部開放</b>。</p>
+        <div class="versus">
+          <div class="vopt lose">
+            <span class="vtag">放棄</span>
+            <div class="vt">全部開放</div>
+            <p>所有冥想主題自由選擇，想練哪個練哪個</p>
+          </div>
+          <div class="vs">vs</div>
+          <div class="vopt win">
+            <span class="vtag">我的選擇</span>
+            <div class="vt">循序解鎖</div>
+            <p>一次只給一關，完成才解鎖下一關</p>
+          </div>
+        </div>
+        <p class="intro" style="margin-top:16px">一個機制同時回應兩個痛點：「主題太多不知道選哪個」，因為一次只有一關，不需要選；「沒有動力持續」，因為解鎖本身就是獎勵。代價也很明確：<b>有經驗的使用者會被進度綁住</b>，無法直接跳到想要的主題。</p>
+
+        <div class="sub">
+          <h3>三個決策</h3>
+          <div class="dcards">
+            <div class="dcard">
+              <span class="dph">開始</span>
+              <span class="dnum">決策 01</span>
+              <h4>循序解鎖的主題結構</h4>
+              <span class="dsrc">依據 · 旅程斷點「主題選項多不知如何選擇」；KEVIN「沒有動力每天冥想」。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>Level 1 呼吸、Level 2 減壓、Level 3 內觀，完成當前主題才解鎖下一個</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>自由選擇：有經驗的使用者被進度綁住</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dph">持續</span>
+              <span class="dnum">決策 02</span>
+              <h4>心情日記與進度追蹤</h4>
+              <span class="dsrc">依據 · KEVIN「能追蹤冥想紀錄和看到活動結果」；把看不見的進步變成看得見的數據與心情。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>冥想完成即寫心情、進步率圓環與每週時間長條圖</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>完成即離開的極簡流程：多一步紀錄，換長期的動力</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dph">分享</span>
+              <span class="dnum">決策 03</span>
+              <h4>好友聊天與成就分享</h4>
+              <span class="dsrc">依據 · GEOFF「能和身邊的人一起冥想更有樂趣」；旅程斷點「無法與朋友分享」。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>好友邀請、聊天對話、成就與心情分享</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>純個人的產品定位：引入社交就得處理封鎖、靜音與通知的複雜度</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>功能架構與流程</h3>
+          <p>功能架構沿五個支柱展開；流程分成帳號與冥想兩條主線，冥想完成後接心情日記與解鎖新課程，把「完成 → 紀錄 → 解鎖」串成動力迴圈。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/functional-map.jpg" alt="Functional Map 功能架構" loading="lazy" /><div class="cap">Functional Map · 六大功能分支</div></div>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/userflow.jpg" alt="User Flow：帳號與冥想主流程" loading="lazy" /><div class="cap">User Flow · 登入註冊與冥想主流程，完成後接日記與解鎖</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>Wireframe</h3>
+          <p>以線框把啟動、主題、播放、追蹤、日記到聊天的畫面骨架排定，再進入視覺設計。</p>
+          <div class="fig"><img src="../assets/images/project/UIUX/web/soulmap/wireframe.jpg" alt="Wireframe 畫面骨架" loading="lazy" /></div>
+        </div>
+
+        <div class="sub">
+          <h3>練習的邊界</h3>
+          <p>本專案為概念設計，尚未進行易用性測試。若後續投入開發，優先驗證的是解鎖機制，循序解鎖降低了初學者的選擇負擔，<b>但對已有經驗、想自由探索的使用者可能形成新的限制</b>，兩者的平衡需要以測試確認。</p>
+        </div>
+      </section>
+
     </div>
+  </div>
+
+  <!-- 04 介面設計（淺色展示區） -->
+  <section class="uilight" id="s4" data-sec>
+    <div class="uhead">
+      <span class="k">04</span>
+      <h2>介面設計</h2>
+      <p>介面以藍紫色為主色，搭配玻璃質感與漸層營造平靜放鬆的氛圍；三個 Level 分別對應專屬角色與代表色，作為情緒與進度的視覺識別。</p>
+    </div>
+
+    <div class="ui-sub">
+      <span class="k">Design System</span>
+      <h3>Style Guide</h3>
+      <p>色彩、字級、按鈕與元件狀態的規格，維持多畫面的一致性。</p>
+    </div>
+    <div class="wide">
+      <div class="sgbox"><img src="../assets/images/project/UIUX/web/soulmap/styleguide.jpg" alt="Style Guide 設計系統" loading="lazy" /></div>
+      <div class="boxhint">↕ 框內可捲動查看完整設計系統</div>
+    </div>
+
+    <div class="ui-sub">
+      <span class="k">Character</span>
+      <h3>角色設計</h3>
+      <p>三個 Level 各有一位冥想角色與情緒代表色，陪使用者從呼吸練到內觀；角色也是解鎖進度的視覺回饋。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/character.jpg" alt="三個 Level 的冥想角色設計" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 01</span>
+      <h3>啟動與歡迎</h3>
+      <p>進入 App 先預告接下來會發生的事，降低初學者的不確定感。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-1.jpg" alt="啟動畫面與歡迎頁" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 02</span>
+      <h3>登入與註冊</h3>
+      <p>支援第三方登入，註冊的理由講清楚：保存你的練習紀錄。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-2.jpg" alt="登入與註冊" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 03</span>
+      <h3>解鎖式主題</h3>
+      <p>Level 1 到 Level 3 由呼吸、減壓到內觀，鎖頭即進度：決策 01 的落地。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-3.jpg" alt="解鎖式冥想主題" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 04</span>
+      <h3>冥想引導動畫</h3>
+      <p>吸氣、吐氣跟著角色動畫走，不靠文字指令維持專注。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-4.jpg" alt="冥想引導動畫序列" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 05</span>
+      <h3>心情回饋</h3>
+      <p>冥想結束即刻記下心情，回顧時看得到自己的變化：決策 02 的落地。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-5.jpg" alt="冥想後的心情回饋" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 06</span>
+      <h3>追蹤與日記</h3>
+      <p>進步率圓環、每週時間長條與心情日記，把持續變成看得見的成果。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-6.jpg" alt="練習追蹤與心情日記" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 07</span>
+      <h3>日曆與回顧</h3>
+      <p>依日期回看每一次練習與當時的心情。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-7.jpg" alt="日曆選擇與回顧" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 08</span>
+      <h3>好友與聊天</h3>
+      <p>邀請好友、分享心情與成就，練習的旅程不孤單：決策 03 的落地。</p>
+    </div>
+    <div class="wide"><img src="../assets/images/project/UIUX/web/soulmap/ui-8.jpg" alt="好友聊天與分享" loading="lazy" /></div>
   </section>
-
-  <div class="wrap">
-    <dl class="case-meta">
-      <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
-      <div><dt>Type</dt><dd>Mobile App · Wellness</dd></div>
-      <div><dt>Tools</dt><dd>Figma</dd></div>
-      <div><dt>Year</dt><dd>2023</dd></div>
-    </dl>
-  </div>
-
-  <div class="wrap">
-    <section class="block">
-      <h2>Overview 專案概述</h2>
-      <p>以「冥想與自我覺察」為主題的 App 概念，下方長圖呈現從 UX 研究、人物誌、資訊架構、風格指南到最終 UI 視覺的完整流程。設計上以柔和漸層與 3D 角色營造平靜、被陪伴的使用感受。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">01</span>
-    <h2>背景與目標</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>高壓與資訊過載的生活裡，許多人想透過冥想安頓自己，卻總是「下載了、打開兩次、然後放著」。Soul Map 是一個以冥想與自我覺察為主題的 App 概念，從 UX 研究、人物誌、資訊架構一路推進到 UI 視覺，目標是做出一個讓初學者敢開始、也留得下來的心靈練習空間。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">02</span>
-    <h2>挑戰與洞察</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>研究中最關鍵的洞察是：初學者的障礙不是「不想靜下來」，而是「不知道從哪裡開始、也不確定自己有沒有做對」；而工具型的冷介面反而放大了這種不安。使用者需要的是低門檻的引導與溫和的陪伴感，而不是又一個逼人打卡的效率工具。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">03</span>
-    <h2>設計決策</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>把「陪伴感」做成介面本身：柔和的藍紫漸層與圓潤的 3D 角色降低心理防備，像被引導而不是被監督。冥想內容以等級制展開（從「初學者冥想」開始），永遠知道下一步是什麼；「追蹤」與「日記」雙模式並行，把數據化的進度與感受性的書寫分開，練習的成就感不必依賴連續天數。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">04</span>
-    <h2>介面設計</h2>
-    <p>從 UX 研究、人物誌、資訊架構、風格指南到最終 UI 的完整案例長圖。</p>
-  </div>
-  <div class="longshot">
-    <img src="../assets/images/project/UIUX/empty-soul-map.jpg" alt="Soul Map 心靈冥想 App 完整案例" />
-  </div>
 
   <section class="next">
     <div class="wrap">
@@ -97,6 +272,22 @@
     <span>UI/UX Case Study</span>
   </div>
 </footer>
+
+<script>
+  // 左側章節錨點：捲動高亮
+  const links = [...document.querySelectorAll('.cx-nav a')];
+  const map = {}; links.forEach(a => map[a.getAttribute('href')] = a);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map['#' + e.target.id];
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  document.querySelectorAll('[data-sec]').forEach(s => io.observe(s));
+</script>
 
 </body>
 </html>
