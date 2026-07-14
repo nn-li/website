@@ -343,7 +343,7 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 .ui-sub { max-width: 1180px; margin: 46px auto 2px; padding: 0 24px; }
 .ui-sub .k { font-family: "Fraunces", serif; color: var(--clay); font-size: 13px; letter-spacing: .04em; }
 .ui-sub h3 { font-family: "Fraunces", serif; font-weight: 500; font-size: 21px; margin: 3px 0 4px; letter-spacing: -.01em; }
-.ui-sub p { color: var(--ink-soft); font-size: 14.5px; max-width: 60ch; }
+.ui-sub p { color: var(--ink-soft); font-size: 14.5px; }
 .screens { max-width: 1180px; margin: 16px auto 0; padding: 0 24px; column-count: 3; column-gap: 20px; }
 .screens .shot { break-inside: avoid; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 20px 44px -34px rgba(28,26,23,.5); }
 .screens .shot img { width: 100%; display: block; }
