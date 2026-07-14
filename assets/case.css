@@ -325,6 +325,20 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
   .pgrid { column-count: 2; }
 }
 
+/* ---- light UI showcase section (brand-light projects, e.g. TRA) ---- */
+.uilight { border-top: 1px solid var(--line); margin-top: 8px; padding: 30px 0 50px; }
+.uilight .uhead { max-width: 1180px; margin: 26px auto 0; padding: 0 24px; }
+.uilight .uhead .k { font-family: "Fraunces", serif; color: var(--clay); font-size: 14px; letter-spacing: .04em; }
+.uilight .uhead h2 { font-family: "Fraunces", serif; font-weight: 400; font-size: clamp(26px, 3.4vw, 40px); margin: 4px 0 10px; letter-spacing: -.01em; }
+.uilight .uhead p { color: var(--ink-soft); }
+.sgbox { max-height: 760px; overflow-y: auto; overflow-x: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.sgbox img { width: 100%; display: block; }
+.sgbox::-webkit-scrollbar { width: 10px; }
+.sgbox::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+.boxhint { font-size: 12px; color: var(--ink-faint); margin-top: 8px; }
+/* boards that carry their own baked-in rounded corners: render as-is */
+.fig img.raw, .wide img.raw { border: none; border-radius: 0; background: transparent; box-shadow: none; }
+
 /* ---- UI screen showcase (phone screenshots, masonry) ---- */
 .ui-sub { max-width: 1180px; margin: 46px auto 2px; padding: 0 24px; }
 .ui-sub .k { font-family: "Fraunces", serif; color: var(--clay); font-size: 13px; letter-spacing: .04em; }

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>台鐵 e訂通 — 訂票 App Redesign · Case Study</title>
-<meta name="description" content="台鐵 e訂通 — 台鐵訂票 App 的 UI/UX 介面與流程重設計。" />
+<meta name="description" content="台鐵 e訂通 — 台鐵官方訂票 App 的 UI/UX 重新設計。從近九千則評論與任務實測找出使用者迷失的環節，重整資訊層級、流程與回饋。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -20,77 +20,260 @@
 </div>
 
 <main>
-  <section class="case-hero">
-    <div class="wrap">
-      <span class="eyebrow">UI/UX · App Redesign · 2023</span>
-      <h1 class="display">台鐵 e訂通</h1>
-      <p class="lead">針對台鐵訂票 App 的操作痛點所做的介面與流程重設計 —— 簡化查詢與訂票步驟、強化列車動態與座位偏好，讓訂票更快、也更直覺。</p>
+  <!-- 滿版 hero -->
+  <div class="cx-herobanner">
+    <img src="../assets/images/project/UIUX/web/tra/cover.jpg" alt="台鐵 e訂通 主視覺" />
+  </div>
+
+  <!-- 標題 -->
+  <div class="cx-title">
+    <span class="eyebrow">UI/UX · App Redesign · 2023</span>
+    <h1 class="display">台鐵 e訂通</h1>
+    <p class="lead">台鐵官方訂票 App 的重新設計：讓使用者找得到功能、走得完流程、取得了票。</p>
+  </div>
+
+  <!-- meta -->
+  <dl class="cx-metarow">
+    <div><dt>專案時程</dt><dd>2023</dd></div>
+    <div><dt>主要負責項目</dt><dd>UX 研究、UI 設計、Prototype</dd></div>
+    <div><dt>使用工具</dt><dd>Figma</dd></div>
+    <div><dt>類型</dt><dd>App Redesign · 交通</dd></div>
+  </dl>
+
+  <!-- 左導覽 + 敘事 -->
+  <div class="cx">
+    <aside class="cx-nav">
+      <ul>
+        <li><a href="#s1" class="active">背景與目標</a></li>
+        <li><a href="#s2">挑戰與洞察</a></li>
+        <li><a href="#s3">設計決策</a></li>
+        <li><a href="#s4">介面設計</a></li>
+      </ul>
+    </aside>
+
+    <div class="cx-main">
+
+      <!-- 01 背景與目標 -->
+      <section class="cx-sec" id="s1" data-sec>
+        <span class="secnum">01</span>
+        <h2 class="lbl">背景與目標</h2>
+        <p class="intro">台鐵 e訂通是台鐵官方的訂票 App，但 App Store 評分只有 2.3、Google Play 只有 2.0。問題不是功能不夠，而是<b>功能都在，使用者卻找不到、走不完</b>：層級混亂、缺乏回饋，每一步操作都要靠猜。</p>
+        <div class="sub">
+          <h3>評分現況</h3>
+          <div class="fig" style="margin-top:14px">
+            <div class="metrics four">
+              <div class="metric"><div class="big">2.3</div><div class="lbl">App Store 評分（滿分 5 分）</div></div>
+              <div class="metric"><div class="big">2.0</div><div class="lbl">Google Play 評分（滿分 5 分）</div></div>
+              <div class="metric"><div class="big">8,900+</div><div class="lbl">兩大商店累計評分與評論數</div></div>
+              <div class="metric"><div class="big">5</div><div class="lbl">評論收斂出的痛點類別</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>使用者在抱怨什麼</h3>
+          <p>分析兩大商店的評論後，抱怨集中成五類：</p>
+          <div class="consensus">
+            <div class="citem"><span>1. 交易流程複雜，要點選、滑動非常多次</span></div>
+            <div class="citem"><span>2. 無法即時得知列車資訊與動態</span></div>
+            <div class="citem"><span>3. 訂票流程繁複，要先查車次才能訂票</span></div>
+            <div class="citem"><span>4. 分票流程難懂，容易出錯</span></div>
+            <div class="citem"><span>5. 取票困擾，部分票種必須到櫃檯處理</span></div>
+          </div>
+          <p><b>五類抱怨指向同一件事：不是缺功能，是流程讓人迷失。</b></p>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/research.jpg" alt="使用者研究：商店評分與五類評論統整" loading="lazy" /><div class="cap">商店評分與評論統整 · 五類痛點的原始證據</div></div>
+        </div>
+        <div class="sub">
+          <h3>專案目標</h3>
+          <ul class="facts">
+            <li>重整功能配置與資訊層級，讓使用者直覺找到所需功能</li>
+            <li>重新設計訂票流程，減少等待時間與操作步驟</li>
+            <li>提供即時班次資訊，不錯過合適的班次</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 02 挑戰與洞察 -->
+      <section class="cx-sec" id="s2" data-sec>
+        <span class="secnum">02</span>
+        <h2 class="lbl">挑戰與洞察</h2>
+        <p class="intro">Redesign 的挑戰和從零設計不同：問題人人都知道，評分就擺在那裡。<b>難的是找出使用者到底在哪一步迷失</b>。</p>
+        <div class="phases">
+          <div class="ph"><span class="pht">評論分析</span><span class="phw">兩大商店近 9,000 則評分與評論</span></div>
+          <div class="ph"><span class="pht">Persona · 4 位</span><span class="phw">沿「搭乘頻率 × App 熟悉度」取樣</span></div>
+          <div class="ph"><span class="pht">任務實測</span><span class="phw">以真實訂票任務走完全程</span></div>
+        </div>
+
+        <div class="sub">
+          <h3>四位使用者：從「每天搭」到「半年搭一次」</h3>
+          <p>台鐵的使用者頻譜極寬，因此 persona 沿<b>「搭乘頻率 × App 熟悉度」</b>取樣：每月搭 1 至 2 次而不熟流程的 Alston、半年才搭一次的 Wendy、每月 4 次以上的跨城常客 Sally、每天通勤卻不用這個 App 的 Cathy。<b>連每天搭車的人都放棄用官方 App 查時刻表，這件事本身就是研究發現。</b></p>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/persona-1.jpg" alt="Persona — Alston" loading="lazy" /><div class="cap">Persona 01 · Alston：每月 1–2 次，操作不熟，有時會搭錯車</div></div>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/persona-2.jpg" alt="Persona — Wendy" loading="lazy" /><div class="cap">Persona 02 · Wendy：半年搭一次，對訂票與搭乘程序最生疏</div></div>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/persona-3.jpg" alt="Persona — Sally" loading="lazy" /><div class="cap">Persona 03 · Sally：每月 4 次以上的跨城常客，最在意退票與分票</div></div>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/persona-4.jpg" alt="Persona — Cathy" loading="lazy" /><div class="cap">Persona 04 · Cathy：每天通勤，卻寧可用別的 App 查時刻表</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>任務實測：他在哪一步迷失</h3>
+          <p>請 Alston 實際訂一張台北到板橋的票。他在四個環節卡住：不知道該從哪個功能開始、要輸入車次卻無法查詢、區間車沒有購票選項、訂票成功後找不到付款入口。<b>他不是不會用 App，是每一步都缺乏指引與回饋，把操作變成猜測。</b></p>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/journey-alston.jpg" alt="Journey Map — Alston 訂票任務實測" loading="lazy" /><div class="cap">Journey Map · Alston 的訂票任務：低谷集中在「開始訂票」與「完成後找不到付款」</div></div>
+        </div>
+
+        <div class="sub">
+          <h3>收斂：三個問題，三個方向</h3>
+          <p>評論、persona 與實測收斂成三個問題方向：<b>資訊層級梳理</b>（找得到）、<b>改善流程</b>（走得完）、<b>優化介面</b>（不出錯）。這三個方向就是設計決策的骨架。</p>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/problem-solution.jpg" alt="定義問題與解決：痛點、需求與三個方向" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <!-- 03 設計決策 -->
+      <section class="cx-sec" id="s3" data-sec>
+        <span class="secnum">03</span>
+        <h2 class="lbl">設計決策</h2>
+        <p class="intro">重新設計最容易掉進「把步驟砍到最少」的陷阱，但實測顯示使用者的挫折不是步驟多，而是<b>每一步都不確定</b>。</p>
+        <div class="versus">
+          <div class="vopt lose">
+            <span class="vtag">放棄</span>
+            <div class="vt">最短流程</div>
+            <p>把步驟數壓到最低</p>
+          </div>
+          <div class="vs">vs</div>
+          <div class="vopt win">
+            <span class="vtag">我的選擇</span>
+            <div class="vt">每一步都確定</div>
+            <p>訂票前多一次確認、付款前後都有回饋，寧可多一步，不讓使用者猜</p>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>功能架構與流程</h3>
+          <p>底部四大分類（車票、訂票、列車動態、旅遊資訊）取代原本的側欄；訂票到取票的主流程重新串接，每個決策點（立即或稍後付款、是否分票）都有明確出口。</p>
+          <div class="fig"><img class="raw" src="../assets/images/project/UIUX/web/tra/functional-map.jpg" alt="Functional Map 與 User Flow" loading="lazy" /><div class="cap">Functional Map 與 User Flow · 五大分支，以及訂票主流程的每個決策點</div></div>
+        </div>
+        <div class="sub">
+          <h3>四個決策</h3>
+          <div class="dcards">
+            <div class="dcard">
+              <span class="dph">導覽</span>
+              <span class="dnum">決策 01</span>
+              <h4>側欄改為底部分類</h4>
+              <span class="dsrc">依據 · 評論「不夠直覺方便，要點選、滑動非常多次」，功能藏在側欄裡找不到。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>車票、訂票、列車動態、旅遊資訊四大分類放進底部導覽，一眼可及</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>舊版資訊架構的慣性：老使用者需要重新學習功能位置</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dph">查詢</span>
+              <span class="dnum">決策 02</span>
+              <h4>車次與時段查詢整合</h4>
+              <span class="dsrc">依據 · 評論「要輸入車次才能訂，變得還得先去查車次」；實測中 Alston 也卡在同一步。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>查詢整合進訂票流程，並提供「常用行程偏好」一鍵帶入</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>進階查詢的獨立入口，換取主流程的連貫</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dph">取分票</span>
+              <span class="dnum">決策 03</span>
+              <h4>取票與分票拆成獨立選項</h4>
+              <span class="dsrc">依據 · 評論「分票的步驟太複雜難懂，容易出錯，還要到櫃檯處理」。舊版把取票與分票放在同一個按鈕。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>兩個獨立選項；分票改為驗證碼直接複製或分享給同行者</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>單一入口的簡潔，換取不混淆</span></div>
+            </div>
+            <div class="dcard">
+              <span class="dph">回饋</span>
+              <span class="dnum">決策 04</span>
+              <h4>每個關鍵動作都有確認與回饋</h4>
+              <span class="dsrc">依據 · Wendy「不敢點選人機驗證，點完又突然訂票成功」，成功了卻不知道下一步在哪。</span>
+              <div class="dline dwin"><span class="k">選擇</span><span>訂票前加入確認步驟、付款前後都有明確的狀態回饋</span></div>
+              <div class="dline dlose"><span class="k">放棄</span><span>最短步驟數：寧可多一步確認，不讓使用者猜</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub">
+          <h3>Wireframe：全流程串接</h3>
+          <p>進入視覺設計前，以線框把訂票、付款、取票、分票到列車動態的主流程完整串接一次，驗證每個決策點的出口都有著落。</p>
+          <div class="sgbox"><img src="../assets/images/project/UIUX/web/tra/wireframe.jpg" alt="Wireframe 全流程線框牆" loading="lazy" /></div>
+          <div class="boxhint">↕ 框內可捲動查看完整線框流程</div>
+        </div>
+        <div class="sub">
+          <h3>成效與驗證</h3>
+          <p>完成重設計後進行了簡單的易用性測試：邀請經常搭乘台鐵的同學實際操作訂票到取票流程，回饋一致認為比現行版本好用。這不是嚴謹的量化驗證，但對一個以「減少迷失」為目標的 redesign，<b>最常用的人覺得變好用，是最直接的訊號</b>。</p>
+        </div>
+      </section>
+
     </div>
+  </div>
+
+  <!-- 04 介面設計（淺色展示區） -->
+  <section class="uilight" id="s4" data-sec>
+    <div class="uhead">
+      <span class="k">04</span>
+      <h2>介面設計</h2>
+      <p>沿用台鐵識別的藍色系建立設計系統，讓多流程的畫面維持一致；以下八組介面對應前面的決策與三個問題方向。</p>
+    </div>
+
+    <div class="ui-sub">
+      <span class="k">Design System</span>
+      <h3>Style Guide</h3>
+      <p>色彩、字級、按鈕與元件狀態的完整規格，支撐訂票到取票多流程畫面的一致性。</p>
+    </div>
+    <div class="wide">
+      <div class="sgbox"><img src="../assets/images/project/UIUX/web/tra/styleguide.jpg" alt="Style Guide 設計系統" loading="lazy" /></div>
+      <div class="boxhint">↕ 框內可捲動查看完整設計系統</div>
+    </div>
+
+    <div class="ui-sub">
+      <span class="k">介面 01</span>
+      <h3>首頁與訂票</h3>
+      <p>底部四分類導覽與「常用行程偏好」一鍵帶入：決策 01、02 的落地。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-1.jpg" alt="首頁與訂票功能" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 02</span>
+      <h3>訂票流程</h3>
+      <p>車次列表、時刻表、確認訂票到完成回饋：查詢整合與確認步驟的完整路徑。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-2.jpg" alt="訂票功能操作流程" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 03</span>
+      <h3>票證資訊</h3>
+      <p>票證資訊依層級分類，付款期限、提醒與退票入口都在同一頁：「資訊層級梳理」的落地。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-3.jpg" alt="票證資訊頁" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 04</span>
+      <h3>取票與分票</h3>
+      <p>取票與分票拆成獨立選項，分票改用驗證碼分享：決策 03 的落地。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-4.jpg" alt="取票與分票流程" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 05</span>
+      <h3>付款</h3>
+      <p>稍後付款與立即付款並列，付款前後都有狀態回饋：決策 04 的落地。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-5.jpg" alt="付款功能" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 06</span>
+      <h3>車票管理</h3>
+      <p>未付款、未取票、已取票、分票四種狀態分頁，每張票的關鍵資訊一眼可讀。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-6.jpg" alt="車票管理" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 07</span>
+      <h3>列車動態</h3>
+      <p>始發與終點置頂、車種篩選、列車位置即時更新：回應「無法即時得知資訊」的痛點。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-7.jpg" alt="列車動態" loading="lazy" /></div>
+
+    <div class="ui-sub">
+      <span class="k">介面 08</span>
+      <h3>旅遊票券</h3>
+      <p>票券與景點分類瀏覽，新增評價與收藏。</p>
+    </div>
+    <div class="wide"><img class="raw" src="../assets/images/project/UIUX/web/tra/ui-8.jpg" alt="旅遊票券" loading="lazy" /></div>
   </section>
-
-  <div class="wrap">
-    <dl class="case-meta">
-      <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
-      <div><dt>Type</dt><dd>App Redesign</dd></div>
-      <div><dt>Tools</dt><dd>Figma</dd></div>
-      <div><dt>Year</dt><dd>2023</dd></div>
-    </dl>
-  </div>
-
-  <div class="wrap">
-    <section class="block">
-      <h2>Overview 專案概述</h2>
-      <p>針對台鐵訂票 App「台鐵 e訂通」的介面與訂票流程重新設計。目標是把繁瑣的查詢、訂票與劃位步驟收斂得更快、更直覺，並強化列車動態與座位偏好的資訊呈現。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">01</span>
-    <h2>背景與目標</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>台鐵是全台使用量最大的長途運輸之一，官方訂票 App 是多數乘客買票的主要入口；但既有介面的資訊密度高、流程分散，訂一張票往往要在多個頁面之間來回。本次重設計以既有功能為基礎，目標很單純：讓乘客「更快查到、更快訂到」，同時保留台鐵的品牌識別。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">02</span>
-    <h2>挑戰與洞察</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>訂票是一個高頻且目標明確的任務——乘客要的不是逛，而是完成。觀察既有流程後歸納出三個核心問題：查詢條件分散在多個步驟，重複性的通勤與返鄉行程每次都要重填；車次列表難以在出發時間、行車時長與車種之間快速比較；座位與車廂偏好藏得太深，常在最後一步才被迫回頭修改。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">03</span>
-    <h2>設計決策</h2>
-  </div>
-  <div class="wrap">
-    <section class="block" style="margin-top: 8px;">
-      <p>把整個訂票流程收斂成「一頁查詢、一眼比較」：起訖站、時間、人數、座位與車廂偏好在同一張表單完成，並提供「常用行程偏好」讓重複行程一鍵帶入；首頁即時顯示全線營運狀態，異常不必進站才知道。車次卡片以出發／抵達時間為主要層級、行車時長為輔，搭配「更早／更晚車次」快速翻頁；視覺上沿用台鐵的藍色調，以淺藍區塊與大量留白降低長列表的閱讀壓力。</p>
-    </section>
-  </div>
-
-  <div class="board-label">
-    <span class="n">04</span>
-    <h2>介面設計</h2>
-    <p>重新梳理後的訂票流程與畫面。</p>
-  </div>
-  <div class="boards">
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-1.jpg" alt="台鐵 e訂通 主視覺與訂票流程" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-2.jpg" alt="台鐵 e訂通 畫面 2" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-3.jpg" alt="台鐵 e訂通 畫面 3" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-4.jpg" alt="台鐵 e訂通 畫面 4" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-5.jpg" alt="台鐵 e訂通 畫面 5" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-6.jpg" alt="台鐵 e訂通 畫面 6" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-7.jpg" alt="台鐵 e訂通 畫面 7" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-8.jpg" alt="台鐵 e訂通 畫面 8" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-9.jpg" alt="台鐵 e訂通 畫面 9" loading="lazy" /></figure>
-    <figure class="board"><img src="../assets/images/project/UIUX/web/tra-10.jpg" alt="台鐵 e訂通 畫面 10" loading="lazy" /></figure>
-  </div>
 
   <section class="next">
     <div class="wrap">
@@ -106,6 +289,22 @@
     <span>UI/UX Case Study</span>
   </div>
 </footer>
+
+<script>
+  // 左側章節錨點：捲動高亮
+  const links = [...document.querySelectorAll('.cx-nav a')];
+  const map = {}; links.forEach(a => map[a.getAttribute('href')] = a);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = map['#' + e.target.id];
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  document.querySelectorAll('[data-sec]').forEach(s => io.observe(s));
+</script>
 
 </body>
 </html>
