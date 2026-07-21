@@ -60,9 +60,9 @@ a { color: inherit; text-decoration: none; }
   border-radius: 0;
   padding: 8px 18px;
   font-size: 13.5px; letter-spacing: .04em;
-  color: var(--ink); font-weight: 600;
+  color: var(--clay); font-weight: 600;
 }
-.award::before { content: "*"; font-size: 14px; color: var(--clay); }
+.award::before { content: "*"; font-size: 14px; }
 .award .en { color: var(--ink-faint); font-weight: 400; }
 
 /* meta grid */
@@ -175,7 +175,7 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 .smap .srow { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
 .smap .srow b { min-width: 52px; font-family: "Fraunces", serif; font-weight: 500; font-size: 15px; }
 .smap .st { font-size: 11.5px; border: 1px solid var(--line); border-radius: 0; padding: 1px 10px; color: var(--ink-soft); background: var(--paper); white-space: nowrap; }
-.smap .st.hot { border-color: var(--clay); background: var(--clay); color: var(--ink); }
+.smap .st.hot { border-color: var(--clay); color: var(--clay); }
 .smap .sd { flex-basis: 100%; font-size: 12.5px; color: var(--ink-faint); margin-top: 1px; }
 @media (max-width: 720px) { .smap { grid-template-columns: 1fr; } }
 
@@ -196,8 +196,8 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 .versus .lose { border: 1.5px dashed var(--line); color: var(--ink-faint); background: transparent; }
 .versus .lose .vtag { border: 1px solid var(--line); color: var(--ink-faint); }
 .versus .lose p { color: var(--ink-faint); }
-.versus .win { border: 1.5px solid var(--clay); background: var(--paper); box-shadow: 0 20px 46px -34px rgba(23,232,255,.45); }
-.versus .win .vtag { background: var(--clay); color: var(--ink); }
+.versus .win { border: 1.5px solid var(--clay); background: var(--paper); box-shadow: 0 20px 46px -34px rgba(23,61,255,.4); }
+.versus .win .vtag { background: var(--clay); color: #fff; }
 .versus .win p { color: var(--ink-soft); }
 .versus .vs { align-self: center; font-family: "Fraunces", serif; font-style: italic; color: var(--ink-faint); font-size: 15px; }
 @media (max-width: 720px) { .versus { grid-template-columns: 1fr; } .versus .vs { text-align: center; } }
@@ -208,7 +208,7 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 .phases .ph .pht { display: block; font-family: "Fraunces", serif; font-size: 17px; }
 .phases .ph .phw { display: block; font-size: 12.5px; color: var(--ink-soft); margin-top: 3px; }
 .phases .ph.hot { border-color: var(--clay); }
-.phases .ph.hot .phw { color: var(--ink); font-weight: 600; }
+.phases .ph.hot .phw { color: var(--clay); font-weight: 600; }
 .phases .ph.mute { background: var(--paper); }
 .phases .ph.mute .phw { color: var(--ink-soft); }
 @media (max-width: 720px) { .phases { grid-template-columns: 1fr; } }
@@ -242,12 +242,12 @@ footer { border-top: 1px solid var(--line); padding: 30px 0; }
 /* scannable persona cards (recruiter quick-read) */
 .pcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
 .pcard { border: 1px solid var(--line); border-radius: 2px; overflow: hidden; background: var(--paper); display: flex; flex-direction: column; }
-.pcard.key { border-color: var(--clay); box-shadow: 0 20px 46px -34px rgba(23,232,255,.45); }
+.pcard.key { border-color: var(--clay); box-shadow: 0 20px 46px -34px rgba(23,61,255,.4); }
 .pcard .face { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; display: block; }
 .pcard .body { padding: 15px 17px 18px; display: flex; flex-direction: column; flex: 1 1 auto; }
 .pcard .nm { font-family: "Fraunces", serif; font-size: 20px; font-weight: 500; letter-spacing: -.01em; }
 .pcard .tag { font-size: 12.5px; color: var(--clay); font-weight: 600; margin-top: 3px; letter-spacing: .02em; }
-.pcard .badge { align-self: flex-start; margin-top: 9px; font-size: 11px; font-weight: 700; letter-spacing: .03em; color: var(--ink); background: var(--clay); border-radius: 0; padding: 3px 11px; }
+.pcard .badge { align-self: flex-start; margin-top: 9px; font-size: 11px; font-weight: 700; letter-spacing: .03em; color: #fff; background: var(--clay); border-radius: 0; padding: 3px 11px; }
 .pcard .pq { font-size: 13.5px; color: var(--accent); font-style: italic; margin-top: 11px; line-height: 1.55; }
 .pcard .move { font-size: 13px; color: var(--ink-soft); margin-top: 11px; }
 .pcard .move b { color: var(--ink); font-weight: 600; }

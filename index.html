@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/theme.css" />
 
 <style>
@@ -123,17 +123,14 @@
   .dot { display: none; }
 
   .hero h1 {
-    font-family: "Hanken Grotesk", "Noto Sans TC", system-ui, sans-serif;
-    font-weight: 900;
-    font-size: clamp(46px, 8.6vw, 126px);
+    font-size: clamp(38px, 5.6vw, 76px);
     line-height: 1.08;
-    letter-spacing: .005em;
-    text-transform: uppercase;
   }
   br.mbr { display: none; }
   .hero h1 em {
-    font-style: normal;
-    color: var(--ink);
+    font-style: italic;
+    color: var(--clay);
+    font-weight: 300;
   }
   .hero-lower {
     display: flex;
@@ -188,14 +185,7 @@
   .sec-head .num { font-size: 13px; color: var(--clay); letter-spacing: .08em; }
   .sec-head .num::before { content: "( "; }
   .sec-head .num::after { content: " )"; }
-  .sec-head h2 {
-    font-family: "Hanken Grotesk", "Noto Sans TC", system-ui, sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: clamp(30px, 4.6vw, 54px);
-    line-height: 1.05;
-    letter-spacing: .005em;
-  }
+  .sec-head h2 { font-size: clamp(32px, 5vw, 58px); }
 
   /* WORK */
   .work { padding: 110px 0; }
@@ -248,7 +238,7 @@
     border: 1px solid var(--line); border-radius: 0; padding: 4px 12px;
   }
   .project .tags span.win {
-    color: var(--ink); border-color: var(--clay); background: var(--clay); font-weight: 600;
+    color: var(--clay); border-color: var(--clay); font-weight: 600;
   }
   .project .tags span.win::before { content: "* "; font-size: 13px; }
   .project .p-right { text-align: right; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
@@ -274,7 +264,7 @@
     max-width: 21em;
     margin: 0 auto;
   }
-  .about-lead b { font-weight: 450; font-style: italic; background: linear-gradient(transparent 62%, var(--clay) 62%); }
+  .about-lead b { color: var(--clay); font-weight: 400; font-style: italic; }
   .about-body { color: var(--ink-soft); margin: 28px auto 0; max-width: 576px; text-align: center; }
   .about-more {
     display: block; width: fit-content; margin: 30px auto 0;
@@ -338,11 +328,11 @@
   .fcol-links a { color: var(--dark-ink); width: fit-content; border-bottom: 1px solid transparent; transition: border-color .3s; }
   .fcol-links a:hover, .fcol-links a:focus-visible { border-color: var(--dark-ink); }
   .foot-mark {
-    font-family: "Hanken Grotesk", "Noto Sans TC", system-ui, sans-serif;
-    font-weight: 800;
-    font-size: clamp(96px, 19vw, 290px);
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(88px, 17vw, 260px);
     line-height: .95;
-    letter-spacing: -.03em;
+    letter-spacing: -.02em;
     text-align: center;
     color: var(--dark-ink);
     user-select: none;
@@ -401,7 +391,7 @@
     body { font-size: 16px; }
     .wrap { padding: 0 22px; }
     .hero { padding: 140px 0 64px; }
-    .hero h1 { font-size: clamp(34px, 10vw, 64px); }
+    .hero h1 { font-size: clamp(30px, 8.6vw, 52px); }
     br.mbr { display: inline; }
     .foot-cols { gap: 40px; justify-content: space-between; }
     .foot-mark { font-size: clamp(72px, 21vw, 120px); }
