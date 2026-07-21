@@ -203,11 +203,14 @@
   }
   .flip-back .fb-hi {
     font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
     font-style: italic;
-    font-size: 27px;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.18;
+    letter-spacing: .02em;
   }
-  .flip-back .fb-line { font-size: 14.5px; opacity: .85; letter-spacing: .04em; }
+  .flip-back .fb-line { font-size: 26px; margin-top: 14px; }
 
   .hero-scroll {
     position: relative; z-index: 3;
@@ -516,9 +519,8 @@
             <img src="assets/images/photo/portrait.jpg" alt="Brynn 的個人照片" />
           </div>
           <div class="flip-back" aria-hidden="true">
-            <span class="fb-hi">Nice to meet you!</span>
-            <span class="fb-line">UI/UX Designer</span>
-            <span class="fb-line">Taipei, Taiwan</span>
+            <span class="fb-hi">Scroll down<br />and know<br />me better</span>
+            <span class="fb-line">↓</span>
           </div>
         </div>
       </div>
