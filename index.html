@@ -112,14 +112,14 @@
 
   /* ---------- HERO ---------- */
   .hero {
-    padding: 150px 0 80px;
+    padding: 108px 0 64px;
     position: relative; z-index: 2;
     text-align: center;
     overflow: hidden;
   }
   .hero .status {
     display: inline-flex; align-items: center; gap: 6px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     font-size: 13.5px; color: var(--ink-soft);
     letter-spacing: .04em;
   }
@@ -142,11 +142,11 @@
   /* giant backdrop name running behind the photo */
   .hero-bigtext {
     position: absolute;
-    left: 50%; bottom: 130px;
+    left: 50%; bottom: 108px;
     transform: translateX(-50%);
     font-family: "Fraunces", Georgia, serif;
     font-weight: 500;
-    font-size: clamp(140px, 24vw, 350px);
+    font-size: clamp(130px, 21vw, 310px);
     line-height: .82;
     letter-spacing: -.02em;
     color: var(--ink);
@@ -166,9 +166,9 @@
   /* flip card portrait */
   .hero-photo {
     position: relative; z-index: 2;
-    width: min(320px, 68vw);
+    width: min(272px, 64vw);
     aspect-ratio: 4 / 5;
-    margin: 34px auto 0;
+    margin: 24px auto 0;
     perspective: 1200px;
     cursor: pointer;
     outline: none;
@@ -215,7 +215,7 @@
   .hero-scroll {
     position: relative; z-index: 3;
     display: inline-block;
-    margin-top: 38px;
+    margin-top: 26px;
     font-size: 15px;
     color: var(--ink);
     border: 1px solid var(--ink);
@@ -471,11 +471,11 @@
   @media (max-width: 860px) {
     body { font-size: 16px; }
     .wrap { padding: 0 22px; }
-    .hero { padding: 130px 0 60px; }
+    .hero { padding: 108px 0 54px; }
     .hero h1 { font-size: clamp(30px, 8vw, 42px); }
-    .hero-bigtext { bottom: 110px; font-size: clamp(110px, 30vw, 180px); }
-    .hero-photo { width: min(260px, 72vw); margin-top: 26px; }
-    .hero-scroll { margin-top: 30px; }
+    .hero-bigtext { bottom: 96px; font-size: clamp(105px, 28vw, 170px); }
+    .hero-photo { width: min(240px, 66vw); margin-top: 20px; }
+    .hero-scroll { margin-top: 24px; }
     br.mbr { display: inline; }
     .foot-cols { gap: 40px; justify-content: space-between; }
     .foot-mark { font-size: 28vw; }
