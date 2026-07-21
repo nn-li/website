@@ -394,22 +394,8 @@
   footer {
     background: var(--dark);
     color: var(--dark-ink);
-    padding: 40px 0 0;
+    padding: 40px 0 26px;
     position: relative; z-index: 2;
-    overflow: hidden;
-  }
-  /* giant name bleeding off the bottom edge (top half visible) */
-  .foot-mark {
-    font-family: "Hanken Grotesk", system-ui, sans-serif;
-    font-weight: 600;
-    font-size: clamp(90px, 24vw, 400px);
-    line-height: .8;
-    letter-spacing: -.02em;
-    text-align: center;
-    white-space: nowrap;
-    color: var(--dark-ink);
-    user-select: none;
-    margin: 44px 0 -.22em;
   }
   .foot {
     display: flex; justify-content: space-between; align-items: center;
@@ -469,7 +455,6 @@
     .hero-photo { width: min(240px, 66vw); margin-top: 20px; }
     .hero-scroll { margin-top: 24px; }
     br.mbr { display: inline; }
-    .foot-mark { font-size: 28vw; }
     .about-grid { grid-template-columns: 1fr; gap: 46px; }
     .caps-grid { grid-template-columns: 1fr; }
     .project { grid-template-columns: 36px 1fr; }
@@ -647,7 +632,6 @@
     <span>© Copyright 2026 </span>
     <span>Made by Brynn</span>
   </div>
-  <div class="foot-mark" aria-hidden="true">Brynn.</div>
 </footer>
 
 <script>
